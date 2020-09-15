@@ -26,7 +26,7 @@ export default {
 <style>
 body {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   box-sizing: border-box;
   background-color: #FFFFFF;;
 }

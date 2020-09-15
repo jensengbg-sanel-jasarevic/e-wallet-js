@@ -59,6 +59,14 @@ export default {
     background: linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
+    margin-bottom: 3rem;
+    
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .cardnumber {
@@ -69,6 +77,13 @@ export default {
     line-height: 32px;
     letter-spacing: 0.03em;
     color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
 }
 
 .cardholder-name p {
@@ -78,6 +93,7 @@ export default {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
+  text-align: left;
 }
 
 .valid-thru {
@@ -102,6 +118,7 @@ span {
   background: linear-gradient(248.04deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 99.07%), #FFAE34;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+  
 }
 
 .blockchain {

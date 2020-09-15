@@ -1,13 +1,14 @@
 <template>
   <section @input="formValues" class="card-form">
 
-    <label for="cardnumber">CARD NUMBER:</label>
+    <label for="cardnumber">CARD NUMBER </label>
     <input name="number" type="text" v-model="formObj.cardnumber" maxlength="16"/>
     
-    <label for="cardholder">CARDHOLDER NAME:</label>
+    <label for="cardholder">CARDHOLDER NAME </label>
     <input type="text" name="cardholder" placeholder="FIRSTNAME LASTNAME" v-model="formObj.cardholder"/>
 
-    <label for="monthyear">VALID THRU
+<div class="month-year-ccv">
+    <label for="monthyear">VALID THRU 
     <select id="month" name="month" v-model="formObj.month">
       <option value="01">01</option>
       <option value="02">02</option>
@@ -22,6 +23,7 @@
       <option value="11">11</option>
       <option value="12">12</option>
     </select>
+
     <select id="year" name="year" v-model="formObj.year">
       <option value="20">20</option>
       <option value="21">21</option>
@@ -29,10 +31,10 @@
       <option value="23">23</option>
       <option value="24">24</option>
     </select>
-    </label>
-
+</label>
     <label for="ccv" >CCV</label>
     <input type="text" name="ccv" v-model="formObj.ccv" maxlength="3"/>
+</div>
 
     <label for="vendor">VENDOR</label>
     <select id="vendor" name="vendor" v-model="formObj.vendor">
@@ -90,6 +92,40 @@ export default {
   font-size: 22px;
   line-height: 25px;
   text-align: center;
-  color: #FFFFFF;
+  color: #E5E5E5;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  cursor: pointer;
 }
+
+input {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+label {
+  font-family: PT Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+select {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.month-year-ccv {
+  display: flex;
+  justify-content: space-around;
+}
+
 </style>

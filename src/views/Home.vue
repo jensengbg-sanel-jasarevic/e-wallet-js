@@ -3,7 +3,8 @@
         <Top :header="header" :activated="activated" />
         <Card :cardItem="selectedCard" />
         <CardStack :walletCards="walletCards" @activeCard="displayActiveCard"/>
-        <router-link to="/AddCard"><button class="newcard-button">ADD A NEW CARD</button></router-link>
+        <router-link class="add-link" to="/AddCard">ADD A NEW CARD</router-link>
+
   </div>
 </template>
 
@@ -44,14 +45,23 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
 
-.newcard-button {
+.add-link {
   font-family: PT Mono;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
   line-height: 25px;
   text-align: center;
+  border-radius: 8px;
   color: #000000;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 
 </style>
