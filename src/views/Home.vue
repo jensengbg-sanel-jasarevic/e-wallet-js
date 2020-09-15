@@ -17,7 +17,7 @@ export default {
   data() {
   return {
       header: "E-WALLET",
-      activated: undefined,
+      activated: false,
       selectedCard: {}
     }
   },        
