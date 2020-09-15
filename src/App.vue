@@ -1,8 +1,5 @@
 <template>
-<!---->
   <div id="app">
-    <router-link to="/">Home</router-link>|
-      <router-link to="/AddCard">Add Credit Card</router-link>
     <router-view :walletCards="walletCards" @cardInfo="cardToWallet"/>
   </div>
 </template>
@@ -17,12 +14,11 @@ export default {
      }
     },
    
-   methods: {
-   cardToWallet(cardObj) {
-   this.walletCards.push(cardObj);
-   },
+    methods: {
+    cardToWallet(cardObj) {
+    this.walletCards.push(cardObj);
+    }
   
-   
   }
 }
 </script>
@@ -32,7 +28,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-#app {
+  background-color: #FFFFFF;;
 }
 </style>

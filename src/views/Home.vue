@@ -1,32 +1,57 @@
 <template>
   <div class="home-section">
-        <Card :walletCards="walletCards"/>
-        <CardStack :walletCards="walletCards" />
+        <Top :header="header" :activated="activated" />
+        <Card :cardItem="selectedCard" />
+        <CardStack :walletCards="walletCards" @activeCard="displayActiveCard"/>
+        <router-link to="/AddCard"><button class="newcard-button">ADD A NEW CARD</button></router-link>
   </div>
 </template>
 
 <script>
+import Top from '../components/Top.vue'
 import Card from '../components/Card.vue'
 import CardStack from '../components/CardStack.vue'
-
 export default {
-    name: 'Home',
-      
-      
-    components: {
-    Card, 
-    CardStack
+  name: 'Home',
+  
+  data() {
+  return {
+      header: "E-WALLET",
+      activated: undefined,
+      selectedCard: {}
+    }
+  },        
+
+  components: {
+  Top,
+  Card, 
+  CardStack
   },
-    props: {
-    walletCards: Array
+
+  props: {
+  walletCards: Array
   },
+  
   methods: {
-    displayActiveCard() {
+  displayActiveCard(activeCard) {
+  this.selectedCard = activeCard;
+  this.activated = true;
     }
   }
 }     
 </script>
 
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
+
+.newcard-button {
+  font-family: PT Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+}
 
 </style>

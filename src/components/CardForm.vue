@@ -1,11 +1,11 @@
 <template>
-    <section class="card-form">
+  <section @input="formValues" class="card-form">
 
     <label for="cardnumber">CARD NUMBER:</label>
     <input name="number" type="text" v-model="formObj.cardnumber" maxlength="16"/>
     
     <label for="cardholder">CARDHOLDER NAME:</label>
-    <input type="text" name="cardholder" v-model="formObj.cardholder"/>
+    <input type="text" name="cardholder" placeholder="FIRSTNAME LASTNAME" v-model="formObj.cardholder"/>
 
     <label for="monthyear">VALID THRU
     <select id="month" name="month" v-model="formObj.month">
@@ -41,8 +41,8 @@
       <option value="evil">EVIL</option>
       <option value="ninja">NINJA</option>
     </select>
-    
-    <button @click="formValues">ADD CARD</button>
+
+    <button class="add-button" @click="formValues">ADD CARD</button>
   
   </section>
 </template>
@@ -53,20 +53,43 @@ export default {
     
     data () {
     return {
-     formObj: {
-          id: "", cardnumber: "", cardholder: "", year: "", month: "", ccv: "", vendor: ""
+    formObj: {
+          id: "",
+          cardnumber: "",
+          cardholder: "",
+          year: "",
+          month: "",
+          ccv: "",
+          vendor: ""
         }
       }
     },
      
     methods: {
-    formValues() {
-      this.$emit('cardInfo', { cardInfo: this.formObj });
+    formValues(e) {
+    this.$emit('cardInfo', { cardInfo: this.formObj, e: e });
       }
     }
 };
 </script>
 
-<style >
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
 
+.card-form {
+  display: grid;
+  gap: 20px;
+}
+
+.add-button {
+  background: #000000;
+  border-radius: 8px;
+  font-family: PT Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+}
 </style>
