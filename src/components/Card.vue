@@ -59,9 +59,9 @@ export default {
     background: linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    margin-bottom: 3rem;
-    
+    height: 20rem;
 }
+
 .top {
   display: flex;
   justify-content: space-between;
@@ -131,6 +131,7 @@ span {
     background: linear-gradient(248.3deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%), #F33355;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    color: #fff;
 }
 
 .ninja {

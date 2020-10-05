@@ -29,5 +29,7 @@ export default {
 <style scoped>
 .card-stack {
   display: grid;
+  grid-auto-rows: 7rem;
+  margin: 3rem 0 15rem 0;
 }
 </style>

@@ -4,7 +4,6 @@
         <Card :cardItem="selectedCard" />
         <CardStack :walletCards="walletCards" @activeCard="displayActiveCard"/>
         <router-link class="add-link" to="/AddCard">ADD A NEW CARD</router-link>
-
   </div>
 </template>
 
